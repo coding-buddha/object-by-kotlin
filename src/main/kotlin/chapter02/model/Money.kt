@@ -29,4 +29,8 @@ class Money(
     fun times(percent: Double): Money {
         return Money(this.amount.multiply(BigDecimal.valueOf(percent)))
     }
+
+    fun getAmount(): BigDecimal {
+        return this.amount
+    }
 }
