@@ -8,14 +8,14 @@ import java.time.LocalDateTime
 class Screening(
     private val movie: Movie,
     private val sequence: Int,
-    val whenScreened: LocalDateTime
+    private val whenScreened: LocalDateTime
 ) {
 
     fun reserve(customer: Customer, audienceCount: Int): Reservation {
         return Reservation(customer, this, calculateFee(audienceCount), audienceCount)
     }
 
-    private fun calculateFee(audienceCount: Int): Long {
+    private fun calculateFee(audienceCount: Int): Money {
         return movie.calculateMovieFee(this).times(audienceCount)
     }
 
@@ -25,7 +25,11 @@ class Screening(
     }
 
     // 영화의 기본 요금 반환
-    fun getMovieFee(): Long {
+    fun getMovieFee(): Money {
         return this.movie.fee
+    }
+
+    fun getStartTime(): LocalDateTime {
+        return this.whenScreened
     }
 }

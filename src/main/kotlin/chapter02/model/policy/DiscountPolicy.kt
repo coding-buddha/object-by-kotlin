@@ -1,4 +1,4 @@
-package chapter02.model.percent
+package chapter02.model.policy
 
 import chapter02.model.Money
 import chapter02.model.Screening
@@ -11,11 +11,11 @@ import chapter02.model.condition.DiscountCondition
  */
 interface DiscountPolicy {
 
-    val conditions: MutableList<DiscountCondition>
+    val conditions: List<DiscountCondition>
 
     fun calculateDiscountAmount(screening: Screening): Money {
         for (condition in this.conditions) {
-            if (condition.isSatisfieBy(screening)) {
+            if (condition.isSatisfiedBy(screening)) {
                 return getDiscountAmount(screening)
             }
         }
