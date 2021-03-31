@@ -10,7 +10,7 @@ import chapter02.model.condition.DiscountCondition
 class DiscountPercentPolicy(
     private val percent: Double,
     override val conditions: List<DiscountCondition>
-) : DiscountPolicy {
+): DefaultDiscountPolicy(conditions) {
 
     override fun getDiscountAmount(screening: Screening): Money {
         return screening.getMovieFee().times(percent)

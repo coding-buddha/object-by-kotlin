@@ -10,7 +10,7 @@ import chapter02.model.condition.DiscountCondition
 class DiscountAmountPolicy(
     private val discountAmount: Money, // 할인요금
     override val conditions: List<DiscountCondition>
-): DiscountPolicy {
+): DefaultDiscountPolicy(conditions) {
 
     override fun getDiscountAmount(screening: Screening): Money {
         return discountAmount

@@ -7,6 +7,7 @@ import chapter02.model.condition.DiscountPeriodCondition
 import chapter02.model.condition.DiscountSequenceCondition
 import chapter02.model.policy.DiscountAmountPolicy
 import chapter02.model.policy.DiscountPercentPolicy
+import chapter02.model.policy.NoneDiscountPolicy
 import java.time.DayOfWeek
 import java.time.Duration
 import java.time.LocalDateTime
@@ -26,15 +27,6 @@ fun main() {
             )
         ))
 
-    val screenings = listOf(
-        Screening(avatar, 1, LocalDateTime.of(2021, 3, 5, 0, 0, 0)),
-        Screening(avatar, 2, LocalDateTime.of(2021, 3, 5, 0, 0, 0))
-    )
-
-//    for (screening in screenings) {
-//        println(screening.getMovieFee().getAmount())
-//    }
-
     val titanic: Movie = Movie(
         "타이타닉",
         Duration.ofMinutes(180),
@@ -46,4 +38,10 @@ fun main() {
                 DiscountPeriodCondition(DayOfWeek.THURSDAY, LocalTime.of(10, 0), LocalTime.of(13, 59)),
             )
         ))
+
+    val starWars: Movie = Movie(
+        "스타워즈",
+        Duration.ofMinutes(210),
+        Money.wons(10000),
+        NoneDiscountPolicy())
 }
