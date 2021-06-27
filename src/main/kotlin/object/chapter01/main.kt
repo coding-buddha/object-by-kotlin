@@ -1,4 +1,4 @@
-package chapter01
+package `object`.chapter01
 
 /**
  * 소극장을 홍보하기 위해 무작위로 관람객에게 초대장을 발송한다.

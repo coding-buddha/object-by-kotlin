@@ -1,16 +1,14 @@
 package chapter02
 
-import chapter02.model.Money
-import chapter02.model.Movie
-import chapter02.model.Screening
-import chapter02.model.condition.DiscountPeriodCondition
-import chapter02.model.condition.DiscountSequenceCondition
-import chapter02.model.policy.DiscountAmountPolicy
-import chapter02.model.policy.DiscountPercentPolicy
-import chapter02.model.policy.NoneDiscountPolicy
+import `object`.chapter02.model.Money
+import `object`.chapter02.model.Movie
+import `object`.chapter02.model.condition.DiscountPeriodCondition
+import `object`.chapter02.model.condition.DiscountSequenceCondition
+import `object`.chapter02.model.policy.DiscountAmountPolicy
+import `object`.chapter02.model.policy.DiscountPercentPolicy
+import `object`.chapter02.model.policy.NoneDiscountPolicy
 import java.time.DayOfWeek
 import java.time.Duration
-import java.time.LocalDateTime
 import java.time.LocalTime
 
 fun main() {

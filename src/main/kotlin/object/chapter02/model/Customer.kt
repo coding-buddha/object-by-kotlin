@@ -1,4 +1,4 @@
-package chapter02.model
+package `object`.chapter02.model
 
 class Customer(
 

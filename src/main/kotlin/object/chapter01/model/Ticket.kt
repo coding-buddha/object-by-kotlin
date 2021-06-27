@@ -1,4 +1,4 @@
-package chapter01.model
+package `object`.chapter01.model
 
 class Ticket(
     val fee: Long

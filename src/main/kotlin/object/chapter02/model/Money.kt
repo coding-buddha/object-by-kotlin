@@ -1,4 +1,4 @@
-package chapter02.model
+package `object`.chapter02.model
 
 import java.math.BigDecimal
 
@@ -28,6 +28,10 @@ class Money(
 
     fun times(percent: Double): Money {
         return Money(this.amount.multiply(BigDecimal.valueOf(percent)))
+    }
+
+    fun plus(amount: Money): Money {
+        return Money(this.amount.plus(amount.amount))
     }
 
     fun getAmount(): BigDecimal {

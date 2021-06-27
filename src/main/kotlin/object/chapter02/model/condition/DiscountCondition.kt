@@ -1,6 +1,7 @@
-package chapter02.model.condition
+package `object`.chapter02.model.condition
 
-import chapter02.model.Screening
+import `object`.chapter02.model.Screening
+
 
 /**
  * 할인조건

@@ -1,6 +1,6 @@
-package chapter02.model
+package `object`.chapter02.model
 
-import chapter02.model.policy.DiscountPolicy
+import `object`.chapter02.model.policy.DiscountPolicy
 import java.time.Duration
 
 class Movie(

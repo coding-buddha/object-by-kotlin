@@ -1,4 +1,4 @@
-package chapter01.model
+package `object`.chapter01.model
 
 class AdvancedBag(
     private var amount: Long,

@@ -1,8 +1,8 @@
-package chapter02.model.policy
+package `object`.chapter02.model.policy
 
-import chapter02.model.Money
-import chapter02.model.Screening
-import chapter02.model.condition.DiscountCondition
+import `object`.chapter02.model.Money
+import `object`.chapter02.model.Screening
+import `object`.chapter02.model.condition.DiscountCondition
 
 /**
  * 할인정책

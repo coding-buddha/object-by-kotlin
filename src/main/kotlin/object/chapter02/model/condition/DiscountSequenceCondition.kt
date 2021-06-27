@@ -1,6 +1,6 @@
-package chapter02.model.condition
+package `object`.chapter02.model.condition
 
-import chapter02.model.Screening
+import `object`.chapter02.model.Screening
 
 class DiscountSequenceCondition(
     private val sequence: Int
