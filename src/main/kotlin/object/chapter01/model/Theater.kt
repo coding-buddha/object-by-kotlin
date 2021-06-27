@@ -11,6 +11,8 @@ class Theater(
     private val ticketSeller: TicketSeller
 ) {
 
+    // 내부적으로 디미터 법칙에 위배된다.
+    // 객체의 자율성이 줄어든 상태.
     fun enter(audience: Audience): Unit {
         when (audience.bag.hasInvitation()) {
             true -> {
